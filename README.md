@@ -8,6 +8,36 @@ The project focuses on stellar mass, stellar radius, stellar effective temperatu
 
 The analysis combines exploratory visualization, hypothesis testing, correlation analysis, and regression modeling to connect statistical patterns with astronomy and astrophysics context.
 
+## Live Demo
+
+https://aniketgauba67.github.io/exoplanet-stellar-analysis/
+
+This repository is prepared for GitHub Pages deployment from the `main` branch using the repository root (`/(root)`) as the publishing source. The root-level [`index.html`](index.html) file is the public entry point for the rendered report.
+
+### GitHub Pages Deployment
+
+1. Push the latest repository changes to GitHub.
+2. In GitHub, open **Settings > Pages**.
+3. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
+4. Set **Branch** to `main` and the folder to `/(root)`.
+5. Save the settings and wait for GitHub Pages to publish the site.
+
+The public site should then be available at:
+
+```text
+https://aniketgauba67.github.io/exoplanet-stellar-analysis/
+```
+
+### Updating or Rebuilding the Report
+
+The original rendered report is preserved at [`DA220 Project/DA220Project.html`](DA220%20Project/DA220Project.html). To update the public site after regenerating the report:
+
+1. Replace `DA220 Project/DA220Project.html` and any regenerated files in `DA220 Project/images/`.
+2. Copy the updated report to the root as `index.html`.
+3. Copy the updated image assets to the root-level `images/` folder.
+4. Confirm that all HTML asset references use relative paths such as `images/image1.png`.
+5. Commit and push the changes to `main`; GitHub Pages will redeploy automatically.
+
 ## Research Questions
 
 1. **How are stellar properties correlated?**  
@@ -76,9 +106,9 @@ Because the repository currently contains rendered report outputs rather than th
 
 ## Visualizations and Outputs
 
-The main rendered report is available at [`DA220 Project/DA220Project.html`](DA220%20Project/DA220Project.html). A PDF export is also included as [`DA220 Project 2.13.53 AM.pdf`](DA220%20Project%202.13.53%E2%80%AFAM.pdf), and a Word version is included as [`DA220 Project-1.docx`](DA220%20Project-1.docx).
+The public GitHub Pages entry point is [`index.html`](index.html). The original rendered report is preserved at [`DA220 Project/DA220Project.html`](DA220%20Project/DA220Project.html). A PDF export is also included as [`DA220 Project 2.13.53 AM.pdf`](DA220%20Project%202.13.53%E2%80%AFAM.pdf), and a Word version is included as [`DA220 Project-1.docx`](DA220%20Project-1.docx).
 
-Generated images are stored in [`DA220 Project/images/`](DA220%20Project/images/).
+Generated images are stored in [`DA220 Project/images/`](DA220%20Project/images/). A root-level copy is stored in [`images/`](images/) so `index.html` can load assets correctly when hosted by GitHub Pages.
 
 | Output | File | Description |
 | --- | --- | --- |
@@ -95,6 +125,17 @@ Generated images are stored in [`DA220 Project/images/`](DA220%20Project/images/
 
 ```text
 .
+|-- index.html
+|-- images/
+|   |-- image1.png
+|   |-- image2.png
+|   |-- image3.png
+|   |-- image4.png
+|   |-- image5.png
+|   |-- image6.png
+|   |-- image7.gif
+|   `-- image8.png
+|-- favicon.svg
 |-- Data.csv
 |-- DA220 Project/
 |   |-- DA220Project.html
@@ -116,6 +157,9 @@ Generated images are stored in [`DA220 Project/images/`](DA220%20Project/images/
 | Path | Purpose |
 | --- | --- |
 | `Data.csv` | NASA Exoplanet Archive dataset used for the analysis |
+| `index.html` | GitHub Pages entry point for the public static site |
+| `images/` | Root-level assets used by `index.html` on GitHub Pages |
+| `favicon.svg` | Lightweight static favicon for the public site |
 | `DA220 Project/DA220Project.html` | Rendered HTML report for the project |
 | `DA220 Project/images/` | Generated visualization and model-output images referenced by the HTML report |
 | `DA220 Project 2.13.53 AM.pdf` | PDF export of the project report |
@@ -129,13 +173,13 @@ Note: the repository does not currently include the original R script, R Markdow
 
 ### Option 1: Review the Rendered Report
 
-Open the HTML report directly in a browser:
+Open the GitHub Pages-ready HTML report directly in a browser:
 
 ```text
-DA220 Project/DA220Project.html
+index.html
 ```
 
-The PDF and Word exports can also be opened from the repository root.
+The original generated HTML report remains available at `DA220 Project/DA220Project.html`. The PDF and Word exports can also be opened from the repository root.
 
 ### Option 2: Explore the Dataset in RStudio
 
